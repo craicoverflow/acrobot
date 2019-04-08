@@ -1,0 +1,17 @@
+{
+  "timeZone": "Europe/London",
+  "dependencies": {
+    "enabledAdvancedServices": [{
+      "userSymbol": "AppsActivity",
+      "serviceId": "appsactivity",
+      "version": "v1"
+    }, {
+      "userSymbol": "DriveActivity",
+      "serviceId": "driveactivity",
+      "version": "v2"
+    }]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "chat": {
+  }
+}
