@@ -1,11 +1,10 @@
+
 /**
  * Responds to a MESSAGE event in Hangouts Chat.
  *
  * @param {Object} event the event object from Hangouts Chat
  */
 function onMessage(event) {
-    var name = "";
-
     return getAcronym(event);
 }
 
@@ -35,11 +34,12 @@ function onAddToSpace(event) {
         message = getAcronym(event);
     }
 
+
     return { "text": message };
 }
 
 function getAcronym(event) {
-    var acronym = event.message.text;
+    var acronym = cleanText(event.message.text);
 
     const meaning = findMeaning(acronym);
 
@@ -54,6 +54,18 @@ function getAcronym(event) {
 }
 
 /**
+ * Removed bot name, extra spaces, and returns back the important part of the
+ * text sent.
+ * @param {String} text
+ * @return {String}
+ */
+function cleanText(text) {
+    return text
+        .toLowerCase()
+        .replace('@acrobot ', '');
+}
+
+/**
  * Responds to a REMOVED_FROM_SPACE event in Hangouts Chat.
  *
  * @param {Object} event the event object from Hangouts Chat
@@ -64,7 +76,10 @@ function onRemoveFromSpace(event) {
 
 function getAcronyms() {
     return {
+        "A&I": "Assets & Integration",
         "PTO": "Paid time off",
         "WFH": "Working from home"
     }
 }
+
+const msg = 'hello';

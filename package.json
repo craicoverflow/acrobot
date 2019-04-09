@@ -1,0 +1,28 @@
+{
+  "name": "acrobot",
+  "version": "1.0.0",
+  "description": "A Hangouts Chat bot to display the real meaning for acronyms",
+  "main": "Code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craicoverflow/acrobot.git"
+  },
+  "keywords": [
+    "bot",
+    "hangouts",
+    "chatbot",
+    "google"
+  ],
+  "author": "Enda Phelan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craicoverflow/acrobot/issues"
+  },
+  "homepage": "https://github.com/craicoverflow/acrobot#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
